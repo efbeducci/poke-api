@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Poke Api</title>
+</head>
+<body>
+    <h1 id="title">Pokedex</h1>
+    <center>
+    <div class="container">
+        <div class="cards">
+        </div>  
+        <div class="buttons" id="buttons">
+            <button id="previous"  class="previous">&laquo; Previous</button>
+            <button id="next"  class="next">Next &raquo;</button>
+        </div>
+    </div>
+    </center>
+    <div id="info_container" onmousedown="if(event.target.id==this.id)closeDetails()" style="opacity: 0; visibility: hidden;">
+      <div id="info" style="opacity: 0; visibility: hidden; transform: translate(-50%,-50%) scale(0.92)">
+        <h1 style="margin-top: 2.5%; position: absolute; top: 0;">Pokemon details</h1>
+        <div id="info_content"></div>
+        <svg id="close_button" onclick="closeDetails()" onmousedown="this.style.transform='scale(0.9)'" onmouseover="this.children[0].setAttribute('stroke', '#a00');this.style.transform=event.buttons==1?'scale(0.9)':'scale(1.1)'" onmouseout="this.children[0].setAttribute('stroke', '#000');this.style.transform='scale(1)'" viewBox="0 0 50 50" style="position: absolute; top: 4%; right: 5%; width: 30px;">
+          <path d="M 0 0 l 50 50 M 50 0 l -50 50" stroke-width="2" stroke="#000" fill="none"></path>
+        </svg>
+      </div>
+    </div>
+    
+    <script src="index.js"></script>
+
+</body>
+</html>
